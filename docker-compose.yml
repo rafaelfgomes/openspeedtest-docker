@@ -1,12 +1,6 @@
 services:
   openspeedtest:
-    build:
-      context: .
-      dockerfile: build/Dockerfile
-      args:
-        - UID=${UID:-1000}
-        - GID=${GID:-1000}
-        - TIMEZONE=${TIMEZONE:-UTC}
+    image: openspeedtest/latest
     container_name: openspeedtest
     hostname: openspeedtest
     restart: unless-stopped
