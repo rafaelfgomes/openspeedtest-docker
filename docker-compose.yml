@@ -4,8 +4,4 @@ services:
     container_name: openspeedtest
     hostname: openspeedtest
     restart: unless-stopped
-    networks:
-      net:
-
-networks:
-  net: {}
+    network_mode: host
